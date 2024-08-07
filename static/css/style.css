@@ -1,0 +1,432 @@
+.box_general_information {
+    display: flex;
+    padding: 20px 150px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Se usa en el archivo reduce_costs.php */
+table {
+    font-family: 'Titillium';
+    font-size: 12px;
+    letter-spacing: 1px;
+    table-layout: fixed; /* Distribuye el espacio uniformemente */
+    border-collapse: collapse; /* Asegura que las celdas compartan bordes */
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+/* ------------------------------------------ */
+/* Class información cajas */
+/* ------------------------------------------ */
+
+/* Se usa en el archivo about_us, reduce_costs.php, info_platform.php */
+.column_general_info {
+    flex: 1;
+    padding: 10px;
+    color: white;
+}
+
+/* Se usa en el archivo about_us */
+.purple_background_color {
+    background-color: #8279FF;
+}
+
+/* Se usa en el archivo reduce_costs.php */
+.blue_background_color {
+    background-color: #041E71;
+}
+
+/* Se usa en el archivo info_platform.php, reduce_costs.php */
+.green_background_color {
+    background-color: #13EAB1;
+}
+
+/* Se usa en el archivo about_us */
+.column_about_us {
+    flex: 1;
+    background-color: #8279FF;
+    padding: 10px;
+    color: white;
+}
+
+/* Se usa en el archivo reduce_costs.php */
+th,
+td {        
+    width: 33.33%; /* Cada columna ocupa un tercio del ancho total */
+    padding: 10px 15px; /* Añade espacio interno a las celdas */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */ 
+}
+
+/* ------------------------------------------ */
+/* Texto */
+/* ------------------------------------------ */
+
+/* Se usa en el archivo about_us, reduce_costs, info_platform */
+.info_font_family{
+    font-family: 'Titillium';
+}
+
+/* Se usa en el archivo about_us */
+.text_about_us {    
+    text-align: justify;
+    font-size: 25px;
+    padding-top: 50px;
+    padding-right: 30px;
+}
+
+/* Se usa en el archivo reduce_costs */
+.tittle_reduce_costs {
+    font-weight: bold;
+    text-align: left;
+    font-size: 35px;
+    padding-top: 50px;
+    padding-right: 30px;
+    color: #13EAB1;
+}
+
+/* Se usa en el archivo reduce_costs */
+.text_reduce_costs {
+    text-align: justify;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+/* Se usa en el archivo info_platform */
+.tittle_info_platform {
+    font-weight: bold;
+    text-align: right;
+    font-size: 35px;
+    padding-top: 50px;
+    color: #FFBB00;
+}
+
+/* Se usa en el archivo info_platform */
+.text_info_platform {
+    text-align: right;
+    font-size: 25px;
+    color: #041E71;
+}
+
+/* Se usa en el archivo info_platform */
+.text_interoperability_software {
+    font-size: 25px;
+    color: white;
+}
+
+/* ------------------------------------------ */
+/* Imagenes, lineas, botones, diseño en general */
+/* ------------------------------------------ */
+
+/* Se usa en el archivo about_us */
+.img_about_us {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Se usa en el archivo reduce_costs */
+.img_reduce_costs {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Se usa en el archivo info_platform */
+.img_info_platform {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Se usa en el archivo reduce_costs */
+.border-right {
+    border-right: 15px solid rgb(19, 234, 177);
+}
+
+/* Se usa en el archivo reduce_costs */
+.besort {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+/* Se usa en el archivo reduce_costs */
+.green_line_reduce_costs {
+    border: 0;
+    height: 2px;
+    padding-right: 30px;
+}
+
+/* Se usa en el archivo reduce_costs */
+.btn_reduce_costs {
+    text-align: center;
+    float: right;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+/* Se usa en el archivo info_platform */
+.left_info_platform {
+    flex: 1;
+    background-color: white;
+    padding: 10px;
+    padding-top: 150px;
+}
+
+/* Se usa en el archivo info_platform */
+.right_info_platform {
+    flex: 2;
+    background-color: white;
+    padding: 10px;
+}
+
+/* Se usa en el archivo info_platform */
+.yellow_line_info_platform {
+    border: 0;
+    height: 2px;
+    background-color: #FFBB00;
+    width: 300px;
+    margin-left: auto;
+}
+
+/* Media Queries para hacer responsive */
+@media screen and (max-width: 1200px) {
+    .box_general_information,
+    table,
+    .besort {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box_general_information,
+    table,
+    .besort {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .text_about_us,
+    .tittle_reduce_costs,
+    .text_reduce_costs,
+    .tittle_info_platform,
+    .text_info_platform,
+    .text_interoperability_software {
+        font-size: 20px;
+        padding-top: 20px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box_general_information,
+    table,
+    .besort {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .box_general_information {
+        flex-direction: column;
+    }
+
+    .column_general_info,
+    .column_about_us {
+        flex: none;
+        width: 100%;
+    }
+
+    th, td {
+        width: 100%;
+        display: block;
+    }
+
+    .text_about_us,
+    .tittle_reduce_costs,
+    .text_reduce_costs,
+    .tittle_info_platform,
+    .text_info_platform,
+    .text_interoperability_software {
+        font-size: 18px;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+/* ------------------------ De aca abajo ya estaba hecho NO TOCAR --------------------- */
+/* ------------------------------------------------------------------------------------ */
+.container-info {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70%;
+    width: 40%;
+    font-weight: 400;
+}
+
+.container-contact {
+    padding: 1.2%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.general-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #8279FF;
+}
+
+.container-info {
+    margin-right: 3%;
+}
+
+.card {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .container-info {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+}
+
+.page {
+    background-color: white !important;
+}
+
+.navbar {
+    box-shadow: none;
+    background-color: white !important;
+    padding-left: 30px;
+    padding-right: 100px;
+    margin: 0px;
+}
+
+.navbar-element {
+    color: #000000 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw !important;
+    text-shadow: -3px 4px 6px rgba(0, 0, 0, 0.46);
+}
+
+.navbar-element-toggle {
+    color: #000000 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4vw !important;
+    text-shadow: -3px 4px 6px rgba(0, 0, 0, 0.46);
+}
+
+.navbar-element:hover {
+    font-weight: bold;
+}
+
+.dropdownp {
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 5px 5px 40px;
+    display: inline-block;
+}
+
+.dropdownp-element {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: #080054;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 280px;
+}
+
+.dropdownp-element:hover .dropdownp-element-title {
+    font-size: 18px;
+}
+
+
+.dropdownp-element:hover .dropdownp-element-info {
+    font-size: 15px;
+}
+
+.dropdownp-element:hover svg {
+    width: 50px;
+    height: 60px;
+}
+
+.dropdownp-element svg {
+    width: 40px;
+    height: 50px;
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.dropdownp-element-title {
+    margin: 0px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.dropdownp-element-info {
+    margin: 0px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.textcontact div h3 p {
+    font-family: 'Roboto', sans-serif !important;
+    color: #FFFFFF !important;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-element {
+        font-size: 2vw !important;
+    }
+
+    .dropdownp {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        display: inline-block !important;
+    }
+
+    .dropdownp-element svg,
+    .dropdownp-element-info {
+        display: none !important;
+    }
+
+    .dropdownp-element-title {
+        font-size: 2.2vw !important;
+        color: #000000 !important;
+        transition: font-size 0.3s ease;
+    }
+
+    .dropdownp-element:hover .dropdownp-element-title {
+        font-size: 3vw !important;
+    }
+
+    .dropdownp-element {
+        margin-right: 0 !important;
+        min-width: unset;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .dropdownp-element:hover svg {
+        width: 6vw !important;
+        height: 7vw !important;
+    }
+}
